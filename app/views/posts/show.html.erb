@@ -1,0 +1,23 @@
+<p>
+  <strong>標題:</strong>
+  <%= @post.title %>
+</p>
+
+<p>
+  <strong>內容:</strong>
+  <%= @post.content %>
+</p>
+
+
+<h2>留言列表:</h2>
+
+<ol>
+<%= render @post.comments %>
+</ol>
+
+<br>
+
+<%= render "comments/form" %>
+
+<%= link_to '文章編輯', edit_post_path(@post), class: 'btn btn-lg btn-info' %>
+<%= link_to '返回', posts_path, class: 'btn btn-lg btn-default' %>

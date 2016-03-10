@@ -1,0 +1,13 @@
+<%= form_for([@post, @post.comments.build]) do |f| %>
+
+
+
+  <div class="field">
+    <%= f.label :content, '留言' %><br>
+    <%= f.text_area :content, size: '60%x5%' %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit '送出', class: 'btn btn-lg btn-primary' %>
+  </div>
+<% end %>
